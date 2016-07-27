@@ -1,4 +1,7 @@
 local physics = require "physics"
+local socialModule = require("social")
+
+
 physics.start()
 
 local textObject = display.newText("Hello physics", 100, 250, nil, 48)
@@ -17,6 +20,13 @@ physics.addBody( rectObject, {density = 0.7, friction = 0.5, bounce = 0.5} )
 
 rectObject.bodyType = "static"
 
+socialModule.a = 10
+socialModule.b = 10
 
+print(socialModule:func1())
+
+
+-- result = clazz.calc(clazz)
+-- print(result)
 -- local textObject = display.newText( "Hello",100 ,250 ,nil , 48)
 -- textObject:setTextColor(255, 255, 255)
